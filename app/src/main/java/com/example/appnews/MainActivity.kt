@@ -4,26 +4,28 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
 
 
 class MainActivity : AppCompatActivity() {
 
+    lateinit var txt_judul : TextView
+    lateinit var editText : EditText
     lateinit var btnLogin: Button
-    lateinit var editTextTextEmailAddress2: EditText
-    lateinit var editTextTextPassword: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
 
+        txt_judul = findViewById(R.id.txt_judul)
+        editText = findViewById(R.id.editEmailAddress)
+        editText = findViewById(R.id.editPassword)
         btnLogin = findViewById(R.id.btnLogin)
-        editTextTextEmailAddress2 = findViewById(R.id.editTextTextEmailAddress2)
-        editTextTextPassword = findViewById(R.id.editTextTextPassword)
 
 
         btnLogin.setOnClickListener {
-            if (editTextTextEmailAddress2.text.isEmpty() && editTextTextPassword.text.isEmpty()) {
+            if (editText.text.isEmpty() && editText.text.isEmpty()) {
                 Toast.makeText(
                     applicationContext,
                     "Harap isi Email dan Password terlebih dahulu",
@@ -31,14 +33,14 @@ class MainActivity : AppCompatActivity() {
                 ).show()
                 return@setOnClickListener
             }
-            val intent = Intent(this, SecondActivity::class.java)
-            intent.putExtra("result", editTextTextEmailAddress2.toString())
-            startActivity(intent)
+
+
+            val intentlanjut = Intent(this@MainActivity, SecondActivity::class.java)
+            intent.putExtra("result", editText.toString())
+            startActivity(intentlanjut)
         }
+
     }
 
-    override fun onResume() {
-        super.onResume()
-        editTextTextEmailAddress2
-    }
 }
+

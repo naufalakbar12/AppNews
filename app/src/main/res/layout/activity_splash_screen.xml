@@ -31,7 +31,7 @@
         android:fontFamily="monospace"
         android:text="WartaTerkini"
         android:textAllCaps="false"
-        android:textColor="#111A4A"
+        android:textColor="@color/black"
         android:textSize="26dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
