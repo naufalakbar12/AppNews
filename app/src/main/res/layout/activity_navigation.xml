@@ -7,7 +7,7 @@
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
-    tools:context=".NavigationAct.NavigationActivity">
+    tools:context=".Navigation.NavigationActivity">
     
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             android:elevation="4dp"/>
 
-        <FrameLayout
+        <fragment
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
