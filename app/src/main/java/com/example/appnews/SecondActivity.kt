@@ -16,7 +16,7 @@ class SecondActivity : AppCompatActivity() {
     lateinit var etMenuTop: LinearLayout
     lateinit var daftarberita: RecyclerView
 
-    val apiKey = ""
+    val apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt2dW50c3RvY3Z0Y3pyanJmaXJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzA5MTUxNTUsImV4cCI6MTk4NjQ5MTE1NX0.dNC2zK9GYo5lIpmqEWPg4lz1rB3YqW7_qqRJiIRTnY0"
     val token = "Bearer $apiKey"
 
     var items = ArrayList<com.example.appnews.Model>()
@@ -25,6 +25,7 @@ class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
+        supportActionBar?.hide()
 
         etText = findViewById(R.id.judul)
         etMenuTop = findViewById(R.id.lay_MenuTop)
