@@ -23,9 +23,11 @@
             android:elevation="4dp"/>
 
         <fragment
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            app:navGraph="@navigation/nav_graph"/>
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
